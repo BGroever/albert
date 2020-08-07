@@ -465,7 +465,7 @@ def main(_):
       if not steps_and_files:
         tf.logging.info("found 0 file, global step: {}. Sleeping."
                         .format(global_step))
-        tf.logging.info("*****CHECK*****", steps_and_files)
+        tf.logging.info("*****CHECK*****: {}".format(steps_and_files))
         time.sleep(60)
       else:
         for ele in sorted(steps_and_files.items()):
