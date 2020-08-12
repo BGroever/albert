@@ -524,6 +524,7 @@ def main(_):
         "input_ids": tf.FixedLenFeature([FLAGS.max_seq_length], tf.int64),
         "input_mask": tf.FixedLenFeature([FLAGS.max_seq_length], tf.int64),
         "segment_ids": tf.FixedLenFeature([FLAGS.max_seq_length], tf.int64),
+        "p_mask": tf.FixedLenFeature([seq_length], tf.int64)
       }
       serialized_tf_example = tf.placeholder(dtype=tf.string,
                      shape=[FLAGS.predict_batch_size],
