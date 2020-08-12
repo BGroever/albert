@@ -533,6 +533,15 @@ def main(_):
       features = tf.parse_example(serialized_tf_example, feature_spec)
       return tf.estimator.export.ServingInputReceiver(features, receiver_tensors)
 
+    estimator = contrib_tpu.TPUEstimator(
+      use_tpu=FLAGS.use_tpu,
+      model_fn=model_fn,
+      config=run_config,
+      train_batch_size=FLAGS.train_batch_size,
+      predict_batch_size=FLAGS.predict_batch_size)
+
+    estimator._export_to_tpu = False  ## !!important to add this
+
     estimator.export_saved_model(
                   export_dir_base = FLAGS.export_dir,
                   serving_input_receiver_fn = serving_input_receiver_fn)
