@@ -516,6 +516,8 @@ def main(_):
 
   if FLAGS.do_export:
 
+    tf.logging.info("***** Start exporting *****")
+
     def serving_input_receiver_fn():
       feature_spec = {
         "unique_ids": tf.FixedLenFeature([], tf.int64),
@@ -533,6 +535,8 @@ def main(_):
     estimator.export_saved_model(
                   export_dir_base = FLAGS.export_dir,
                   serving_input_receiver_fn = serving_input_receiver_fn)
+
+    tf.logging.info("***** Finish exporting *****")
 
 if __name__ == "__main__":
   flags.mark_flag_as_required("spm_model_file")
