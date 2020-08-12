@@ -531,7 +531,7 @@ def main(_):
       return tf.estimator.export.ServingInputReceiver(features, receiver_tensors)
 
     estimator.export_saved_model(
-                  export_dir_base = EXPORT_PATH,
+                  export_dir_base = FLAGS.export_dir,
                   serving_input_receiver_fn = serving_input_receiver_fn)
 
 if __name__ == "__main__":
