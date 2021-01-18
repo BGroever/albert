@@ -202,6 +202,8 @@ max_answer_length=30
 re = process_output(all_results,eval_examples,eval_features,'input_file.json',
                     n_best,n_best_size,max_answer_length)
 
+print(all_results)
+
 # example for multiple inputs
 # https://towardsdatascience.com/deploying-bert-using-kubernetes-6ddca23caec5
 
