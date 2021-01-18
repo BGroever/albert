@@ -1,0 +1,26 @@
+{
+    "56ddde6b9a695914005b9628": [
+        {
+            "text": "John Harvard",
+            "probability": 1.0,
+            "start_log_prob": -0.018911415711045265,
+            "end_log_prob": -0.007468280848115683
+        }
+    ],
+    "56ddde6b9a695914005b9629": [
+        {
+            "text": "1977",
+            "probability": 1.0,
+            "start_log_prob": -0.24999667704105377,
+            "end_log_prob": -0.012482141144573689
+        }
+    ],
+    "56ddde6b9a695914005b962a": [
+        {
+            "text": "",
+            "probability": 1.0,
+            "start_log_prob": -1000000.0,
+            "end_log_prob": -1000000.0
+        }
+    ]
+}
